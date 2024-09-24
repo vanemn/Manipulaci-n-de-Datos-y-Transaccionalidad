@@ -41,4 +41,13 @@ SELECT SUM(cantidad) AS total_inscritos FROM INSCRITOS;
              774
 (1 fila)
 
+//¿Cuál o cuáles son los registros de mayor antigüedad?
 
+desafio2_vanessa_morales_123=#
+
+SELECT * FROM INSCRITOS WHERE fecha = (SELECT MIN(fecha) FROM INSCRITOS);
+ cantidad |   fecha    | fuente
+----------+------------+--------
+       44 | 2021-01-01 | Blog
+       56 | 2021-01-01 | Página
+(2 filas)
