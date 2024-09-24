@@ -1,4 +1,8 @@
-desafio2_vanessa_morales_123=# SELECT * FROM inscritos;
+//¿Cuántos registros hay?
+
+desafio2_vanessa_morales_123=# 
+SELECT * FROM inscritos;
+
  cantidad |   fecha    | fuente
 ----------+------------+--------
        44 | 2021-01-01 | Blog
@@ -19,8 +23,22 @@ desafio2_vanessa_morales_123=# SELECT * FROM inscritos;
        99 | 2021-08-01 | Página
 (16 filas)
 
-desafio2_vanessa_morales_123=# SELECT COUNT(*) AS total_registros FROM INSCRITOS;
+desafio2_vanessa_morales_123=# 
+SELECT COUNT(*) AS total_registros FROM INSCRITOS;
+
  total_registros
 -----------------
               16
 (1 fila)
+
+//¿Cuántos inscritos hay en total?
+
+desafio2_vanessa_morales_123=# 
+SELECT SUM(cantidad) AS total_inscritos FROM INSCRITOS;
+
+ total_inscritos
+-----------------
+             774
+(1 fila)
+
+
