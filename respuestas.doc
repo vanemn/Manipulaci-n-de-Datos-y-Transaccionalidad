@@ -46,8 +46,27 @@ SELECT SUM(cantidad) AS total_inscritos FROM INSCRITOS;
 desafio2_vanessa_morales_123=#
 
 SELECT * FROM INSCRITOS WHERE fecha = (SELECT MIN(fecha) FROM INSCRITOS);
+
  cantidad |   fecha    | fuente
 ----------+------------+--------
        44 | 2021-01-01 | Blog
        56 | 2021-01-01 | Página
 (2 filas)
+
+//¿Cuántos inscritos hay por día?
+
+desafio2_vanessa_morales_123=# SELECT fecha, SUM(cantidad) AS inscritos_por_dia
+desafio2_vanessa_morales_123-# FROM INSCRITOS
+desafio2_vanessa_morales_123-# GROUP BY fecha;
+
+   fecha    | inscritos_por_dia
+------------+-------------------
+ 2021-02-01 |               120
+ 2021-08-01 |               182
+ 2021-05-01 |                88
+ 2021-04-01 |                93
+ 2021-06-01 |                30
+ 2021-07-01 |                58
+ 2021-03-01 |               103
+ 2021-01-01 |               100
+(8 filas)
