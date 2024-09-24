@@ -70,3 +70,16 @@ desafio2_vanessa_morales_123-# GROUP BY fecha;
  2021-03-01 |               103
  2021-01-01 |               100
 (8 filas)
+
+//¿Qué día se inscribieron la mayor cantidad de personas y cuántas personas se inscribieron en ese día?
+
+desafio2_vanessa_morales_123=# SELECT fecha, SUM(cantidad) AS total_inscritos
+desafio2_vanessa_morales_123-# FROM INSCRITOS
+desafio2_vanessa_morales_123-# GROUP BY fecha
+desafio2_vanessa_morales_123-# ORDER BY total_inscritos DESC
+desafio2_vanessa_morales_123-# LIMIT 1;
+
+   fecha    | total_inscritos
+------------+-----------------
+ 2021-08-01 |             182
+(1 fila)
